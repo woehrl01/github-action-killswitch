@@ -41,7 +41,11 @@ namespace github_killswitch
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            if (env.IsProduction())
+            {
+                app.UseHttpsRedirection();
+            }
+            
             app.UseStaticFiles();
 
             app.UseRouting();

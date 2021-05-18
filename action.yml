@@ -1,0 +1,10 @@
+name: 'Killswitch'
+description: 'Wait for execution of killswitch'
+inputs:
+  timeout: 
+    description: 'Timeout in seconds'
+    required: true
+    default: '60'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
