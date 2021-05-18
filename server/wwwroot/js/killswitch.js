@@ -30,7 +30,7 @@ connection.on("ConfirmKill", function (actionId) {
 connection.start().then(function () {
 
     var msgBuffer = new Uint32Array(36);
-    window.crypto.getRandomValues(msgBuffer);
+    crypto.getRandomValues(msgBuffer);
 
     const hashBuffer = crypto.subtle.digest('SHA-256', msgBuffer)
         .then( hashBuffer =>  {

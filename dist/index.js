@@ -4229,6 +4229,14 @@ exports.VERSION = Utils_1.VERSION;
 
 /***/ }),
 
+/***/ 417:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("crypto");;
+
+/***/ }),
+
 /***/ 747:
 /***/ ((module) => {
 
@@ -4294,6 +4302,7 @@ var __webpack_exports__ = {};
 (() => {
 const core = __nccwpck_require__(127);
 const signalR = __nccwpck_require__(477);
+const crypto = __nccwpck_require__(417);
 
 async function main() {
 
@@ -4304,12 +4313,21 @@ async function main() {
         const baseurl = core.getInput('baseurl') || 'http://localhost:5000';
 
         let connection = new signalR.HubConnectionBuilder()
-            .withUrl(baseurl + '/killswitchhub')
+            .withUrl(`${baseurl}/killswitchhub`)
             .withAutomaticReconnect()
             .build();
 
+
+        var msgBuffer = crypto.randomBytes(36);
+        const hashHex = crypto.createHash('sha256').update(msgBuffer).digest('hex');
+
+        console.log(`Use key ${hashHex} for kill`);
+
+
         await connection.start();
-        await connection.invoke("RegisterGroup", "abc");
+        await connection.invoke("RegisterGroup", hashHex);
+
+        core.setOutput("killid", hashHex);
 
         await new Promise(
             function(resolve, reject) {
@@ -4320,7 +4338,7 @@ async function main() {
 
                 setTimeout(
                     function() {
-                    resolve()
+                        resolve()
                     }, 1000 * timeout); 
             });
 

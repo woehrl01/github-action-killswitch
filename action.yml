@@ -5,6 +5,9 @@ inputs:
     description: 'Timeout in seconds'
     required: true
     default: '60'
+outputs:
+  killid:
+    description: 'Id to use for kill'
 runs:
   using: 'node12'
   main: 'dist/index.js'
