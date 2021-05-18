@@ -51,6 +51,7 @@ namespace github_killswitch
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
+                endpoints.MapControllers();
                 endpoints.MapHub<KillSwitchHub>("/killswitchhub");
             });
         }
