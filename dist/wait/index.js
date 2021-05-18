@@ -1,7 +1,7 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 604:
+/***/ 122:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -15,7 +15,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const os = __importStar(__nccwpck_require__(87));
-const utils_1 = __nccwpck_require__(245);
+const utils_1 = __nccwpck_require__(747);
 /**
  * Commands
  *
@@ -87,7 +87,7 @@ function escapeProperty(s) {
 
 /***/ }),
 
-/***/ 127:
+/***/ 264:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -109,9 +109,9 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const command_1 = __nccwpck_require__(604);
-const file_command_1 = __nccwpck_require__(352);
-const utils_1 = __nccwpck_require__(245);
+const command_1 = __nccwpck_require__(122);
+const file_command_1 = __nccwpck_require__(210);
+const utils_1 = __nccwpck_require__(747);
 const os = __importStar(__nccwpck_require__(87));
 const path = __importStar(__nccwpck_require__(622));
 /**
@@ -333,7 +333,7 @@ exports.getState = getState;
 
 /***/ }),
 
-/***/ 352:
+/***/ 210:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -349,9 +349,9 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 // We use any as a valid input type
 /* eslint-disable @typescript-eslint/no-explicit-any */
-const fs = __importStar(__nccwpck_require__(747));
+const fs = __importStar(__nccwpck_require__(826));
 const os = __importStar(__nccwpck_require__(87));
-const utils_1 = __nccwpck_require__(245);
+const utils_1 = __nccwpck_require__(747);
 function issueCommand(command, message) {
     const filePath = process.env[`GITHUB_${command}`];
     if (!filePath) {
@@ -369,7 +369,7 @@ exports.issueCommand = issueCommand;
 
 /***/ }),
 
-/***/ 245:
+/***/ 747:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -395,7 +395,7 @@ exports.toCommandValue = toCommandValue;
 
 /***/ }),
 
-/***/ 304:
+/***/ 137:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -442,7 +442,7 @@ exports.AbortController = AbortController;
 
 /***/ }),
 
-/***/ 636:
+/***/ 166:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -460,11 +460,11 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-var Errors_1 = __nccwpck_require__(720);
-var FetchHttpClient_1 = __nccwpck_require__(313);
-var HttpClient_1 = __nccwpck_require__(605);
-var Utils_1 = __nccwpck_require__(375);
-var XhrHttpClient_1 = __nccwpck_require__(939);
+var Errors_1 = __nccwpck_require__(796);
+var FetchHttpClient_1 = __nccwpck_require__(277);
+var HttpClient_1 = __nccwpck_require__(793);
+var Utils_1 = __nccwpck_require__(114);
+var XhrHttpClient_1 = __nccwpck_require__(331);
 /** Default implementation of {@link @microsoft/signalr.HttpClient}. */
 var DefaultHttpClient = /** @class */ (function (_super) {
     __extends(DefaultHttpClient, _super);
@@ -506,7 +506,7 @@ exports.DefaultHttpClient = DefaultHttpClient;
 
 /***/ }),
 
-/***/ 760:
+/***/ 14:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -531,7 +531,7 @@ exports.DefaultReconnectPolicy = DefaultReconnectPolicy;
 
 /***/ }),
 
-/***/ 720:
+/***/ 796:
 /***/ (function(__unused_webpack_module, exports) {
 
 "use strict";
@@ -617,7 +617,7 @@ exports.AbortError = AbortError;
 
 /***/ }),
 
-/***/ 313:
+/***/ 277:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -678,10 +678,10 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-var Errors_1 = __nccwpck_require__(720);
-var HttpClient_1 = __nccwpck_require__(605);
-var ILogger_1 = __nccwpck_require__(294);
-var Utils_1 = __nccwpck_require__(375);
+var Errors_1 = __nccwpck_require__(796);
+var HttpClient_1 = __nccwpck_require__(793);
+var ILogger_1 = __nccwpck_require__(462);
+var Utils_1 = __nccwpck_require__(114);
 var FetchHttpClient = /** @class */ (function (_super) {
     __extends(FetchHttpClient, _super);
     function FetchHttpClient(logger) {
@@ -819,7 +819,7 @@ function deserializeContent(response, responseType) {
 
 /***/ }),
 
-/***/ 328:
+/***/ 316:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -827,8 +827,8 @@ function deserializeContent(response, responseType) {
 // Copyright (c) .NET Foundation. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-var TextMessageFormat_1 = __nccwpck_require__(857);
-var Utils_1 = __nccwpck_require__(375);
+var TextMessageFormat_1 = __nccwpck_require__(617);
+var Utils_1 = __nccwpck_require__(114);
 /** @private */
 var HandshakeProtocol = /** @class */ (function () {
     function HandshakeProtocol() {
@@ -884,7 +884,7 @@ exports.HandshakeProtocol = HandshakeProtocol;
 
 /***/ }),
 
-/***/ 605:
+/***/ 793:
 /***/ (function(__unused_webpack_module, exports) {
 
 "use strict";
@@ -942,7 +942,7 @@ exports.HttpClient = HttpClient;
 
 /***/ }),
 
-/***/ 263:
+/***/ 686:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -993,13 +993,13 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-var DefaultHttpClient_1 = __nccwpck_require__(636);
-var ILogger_1 = __nccwpck_require__(294);
-var ITransport_1 = __nccwpck_require__(858);
-var LongPollingTransport_1 = __nccwpck_require__(385);
-var ServerSentEventsTransport_1 = __nccwpck_require__(372);
-var Utils_1 = __nccwpck_require__(375);
-var WebSocketTransport_1 = __nccwpck_require__(519);
+var DefaultHttpClient_1 = __nccwpck_require__(166);
+var ILogger_1 = __nccwpck_require__(462);
+var ITransport_1 = __nccwpck_require__(698);
+var LongPollingTransport_1 = __nccwpck_require__(180);
+var ServerSentEventsTransport_1 = __nccwpck_require__(939);
+var Utils_1 = __nccwpck_require__(114);
+var WebSocketTransport_1 = __nccwpck_require__(493);
 var MAX_REDIRECTS = 100;
 /** @private */
 var HttpConnection = /** @class */ (function () {
@@ -1658,7 +1658,7 @@ var PromiseSource = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 847:
+/***/ 640:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -1701,11 +1701,11 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-var HandshakeProtocol_1 = __nccwpck_require__(328);
-var IHubProtocol_1 = __nccwpck_require__(510);
-var ILogger_1 = __nccwpck_require__(294);
-var Subject_1 = __nccwpck_require__(197);
-var Utils_1 = __nccwpck_require__(375);
+var HandshakeProtocol_1 = __nccwpck_require__(316);
+var IHubProtocol_1 = __nccwpck_require__(421);
+var ILogger_1 = __nccwpck_require__(462);
+var Subject_1 = __nccwpck_require__(589);
+var Utils_1 = __nccwpck_require__(114);
 var DEFAULT_TIMEOUT_IN_MS = 30 * 1000;
 var DEFAULT_PING_INTERVAL_IN_MS = 15 * 1000;
 /** Describes the current state of the {@link HubConnection} to the server. */
@@ -2633,7 +2633,7 @@ exports.HubConnection = HubConnection;
 
 /***/ }),
 
-/***/ 100:
+/***/ 430:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -2649,13 +2649,13 @@ var __assign = (this && this.__assign) || Object.assign || function(t) {
     return t;
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-var DefaultReconnectPolicy_1 = __nccwpck_require__(760);
-var HttpConnection_1 = __nccwpck_require__(263);
-var HubConnection_1 = __nccwpck_require__(847);
-var ILogger_1 = __nccwpck_require__(294);
-var JsonHubProtocol_1 = __nccwpck_require__(825);
-var Loggers_1 = __nccwpck_require__(424);
-var Utils_1 = __nccwpck_require__(375);
+var DefaultReconnectPolicy_1 = __nccwpck_require__(14);
+var HttpConnection_1 = __nccwpck_require__(686);
+var HubConnection_1 = __nccwpck_require__(640);
+var ILogger_1 = __nccwpck_require__(462);
+var JsonHubProtocol_1 = __nccwpck_require__(798);
+var Loggers_1 = __nccwpck_require__(534);
+var Utils_1 = __nccwpck_require__(114);
 // tslint:disable:object-literal-sort-keys
 var LogLevelNameMapping = {
     trace: ILogger_1.LogLevel.Trace,
@@ -2766,7 +2766,7 @@ function isLogger(logger) {
 
 /***/ }),
 
-/***/ 510:
+/***/ 421:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -2796,7 +2796,7 @@ var MessageType;
 
 /***/ }),
 
-/***/ 294:
+/***/ 462:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -2830,7 +2830,7 @@ var LogLevel;
 
 /***/ }),
 
-/***/ 858:
+/***/ 698:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -2863,7 +2863,7 @@ var TransferFormat;
 
 /***/ }),
 
-/***/ 825:
+/***/ 798:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -2871,11 +2871,11 @@ var TransferFormat;
 // Copyright (c) .NET Foundation. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-var IHubProtocol_1 = __nccwpck_require__(510);
-var ILogger_1 = __nccwpck_require__(294);
-var ITransport_1 = __nccwpck_require__(858);
-var Loggers_1 = __nccwpck_require__(424);
-var TextMessageFormat_1 = __nccwpck_require__(857);
+var IHubProtocol_1 = __nccwpck_require__(421);
+var ILogger_1 = __nccwpck_require__(462);
+var ITransport_1 = __nccwpck_require__(698);
+var Loggers_1 = __nccwpck_require__(534);
+var TextMessageFormat_1 = __nccwpck_require__(617);
 var JSON_HUB_PROTOCOL_NAME = "json";
 /** Implements the JSON Hub Protocol. */
 var JsonHubProtocol = /** @class */ (function () {
@@ -2978,7 +2978,7 @@ exports.JsonHubProtocol = JsonHubProtocol;
 
 /***/ }),
 
-/***/ 424:
+/***/ 534:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -3003,7 +3003,7 @@ exports.NullLogger = NullLogger;
 
 /***/ }),
 
-/***/ 385:
+/***/ 180:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -3054,11 +3054,11 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-var AbortController_1 = __nccwpck_require__(304);
-var Errors_1 = __nccwpck_require__(720);
-var ILogger_1 = __nccwpck_require__(294);
-var ITransport_1 = __nccwpck_require__(858);
-var Utils_1 = __nccwpck_require__(375);
+var AbortController_1 = __nccwpck_require__(137);
+var Errors_1 = __nccwpck_require__(796);
+var ILogger_1 = __nccwpck_require__(462);
+var ITransport_1 = __nccwpck_require__(698);
+var Utils_1 = __nccwpck_require__(114);
 // Not exported from 'index', this type is internal.
 /** @private */
 var LongPollingTransport = /** @class */ (function () {
@@ -3312,7 +3312,7 @@ exports.LongPollingTransport = LongPollingTransport;
 
 /***/ }),
 
-/***/ 372:
+/***/ 939:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -3363,9 +3363,9 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-var ILogger_1 = __nccwpck_require__(294);
-var ITransport_1 = __nccwpck_require__(858);
-var Utils_1 = __nccwpck_require__(375);
+var ILogger_1 = __nccwpck_require__(462);
+var ITransport_1 = __nccwpck_require__(698);
+var Utils_1 = __nccwpck_require__(114);
 /** @private */
 var ServerSentEventsTransport = /** @class */ (function () {
     function ServerSentEventsTransport(httpClient, accessTokenFactory, logger, logMessageContent, eventSourceConstructor, withCredentials, headers) {
@@ -3487,7 +3487,7 @@ exports.ServerSentEventsTransport = ServerSentEventsTransport;
 
 /***/ }),
 
-/***/ 197:
+/***/ 589:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -3495,7 +3495,7 @@ exports.ServerSentEventsTransport = ServerSentEventsTransport;
 // Copyright (c) .NET Foundation. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-var Utils_1 = __nccwpck_require__(375);
+var Utils_1 = __nccwpck_require__(114);
 /** Stream implementation to stream items to the server. */
 var Subject = /** @class */ (function () {
     function Subject() {
@@ -3534,7 +3534,7 @@ exports.Subject = Subject;
 
 /***/ }),
 
-/***/ 857:
+/***/ 617:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -3567,7 +3567,7 @@ exports.TextMessageFormat = TextMessageFormat;
 
 /***/ }),
 
-/***/ 375:
+/***/ 114:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -3618,8 +3618,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-var ILogger_1 = __nccwpck_require__(294);
-var Loggers_1 = __nccwpck_require__(424);
+var ILogger_1 = __nccwpck_require__(462);
+var Loggers_1 = __nccwpck_require__(534);
 // Version token that will be replaced by the prepack command
 /** The version of the SignalR client. */
 exports.VERSION = "5.0.6";
@@ -3881,7 +3881,7 @@ function getRuntime() {
 
 /***/ }),
 
-/***/ 519:
+/***/ 493:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -3932,9 +3932,9 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-var ILogger_1 = __nccwpck_require__(294);
-var ITransport_1 = __nccwpck_require__(858);
-var Utils_1 = __nccwpck_require__(375);
+var ILogger_1 = __nccwpck_require__(462);
+var ITransport_1 = __nccwpck_require__(698);
+var Utils_1 = __nccwpck_require__(114);
 /** @private */
 var WebSocketTransport = /** @class */ (function () {
     function WebSocketTransport(httpClient, accessTokenFactory, logger, logMessageContent, webSocketConstructor, headers) {
@@ -4092,7 +4092,7 @@ exports.WebSocketTransport = WebSocketTransport;
 
 /***/ }),
 
-/***/ 939:
+/***/ 331:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -4110,9 +4110,9 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-var Errors_1 = __nccwpck_require__(720);
-var HttpClient_1 = __nccwpck_require__(605);
-var ILogger_1 = __nccwpck_require__(294);
+var Errors_1 = __nccwpck_require__(796);
+var HttpClient_1 = __nccwpck_require__(793);
+var ILogger_1 = __nccwpck_require__(462);
 var XhrHttpClient = /** @class */ (function (_super) {
     __extends(XhrHttpClient, _super);
     function XhrHttpClient(logger) {
@@ -4188,7 +4188,7 @@ exports.XhrHttpClient = XhrHttpClient;
 
 /***/ }),
 
-/***/ 477:
+/***/ 241:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -4196,48 +4196,40 @@ exports.XhrHttpClient = XhrHttpClient;
 // Copyright (c) .NET Foundation. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-var Errors_1 = __nccwpck_require__(720);
+var Errors_1 = __nccwpck_require__(796);
 exports.AbortError = Errors_1.AbortError;
 exports.HttpError = Errors_1.HttpError;
 exports.TimeoutError = Errors_1.TimeoutError;
-var HttpClient_1 = __nccwpck_require__(605);
+var HttpClient_1 = __nccwpck_require__(793);
 exports.HttpClient = HttpClient_1.HttpClient;
 exports.HttpResponse = HttpClient_1.HttpResponse;
-var DefaultHttpClient_1 = __nccwpck_require__(636);
+var DefaultHttpClient_1 = __nccwpck_require__(166);
 exports.DefaultHttpClient = DefaultHttpClient_1.DefaultHttpClient;
-var HubConnection_1 = __nccwpck_require__(847);
+var HubConnection_1 = __nccwpck_require__(640);
 exports.HubConnection = HubConnection_1.HubConnection;
 exports.HubConnectionState = HubConnection_1.HubConnectionState;
-var HubConnectionBuilder_1 = __nccwpck_require__(100);
+var HubConnectionBuilder_1 = __nccwpck_require__(430);
 exports.HubConnectionBuilder = HubConnectionBuilder_1.HubConnectionBuilder;
-var IHubProtocol_1 = __nccwpck_require__(510);
+var IHubProtocol_1 = __nccwpck_require__(421);
 exports.MessageType = IHubProtocol_1.MessageType;
-var ILogger_1 = __nccwpck_require__(294);
+var ILogger_1 = __nccwpck_require__(462);
 exports.LogLevel = ILogger_1.LogLevel;
-var ITransport_1 = __nccwpck_require__(858);
+var ITransport_1 = __nccwpck_require__(698);
 exports.HttpTransportType = ITransport_1.HttpTransportType;
 exports.TransferFormat = ITransport_1.TransferFormat;
-var Loggers_1 = __nccwpck_require__(424);
+var Loggers_1 = __nccwpck_require__(534);
 exports.NullLogger = Loggers_1.NullLogger;
-var JsonHubProtocol_1 = __nccwpck_require__(825);
+var JsonHubProtocol_1 = __nccwpck_require__(798);
 exports.JsonHubProtocol = JsonHubProtocol_1.JsonHubProtocol;
-var Subject_1 = __nccwpck_require__(197);
+var Subject_1 = __nccwpck_require__(589);
 exports.Subject = Subject_1.Subject;
-var Utils_1 = __nccwpck_require__(375);
+var Utils_1 = __nccwpck_require__(114);
 exports.VERSION = Utils_1.VERSION;
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 417:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("crypto");;
-
-/***/ }),
-
-/***/ 747:
+/***/ 826:
 /***/ ((module) => {
 
 "use strict";
@@ -4300,9 +4292,8 @@ module.exports = require("path");;
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-const core = __nccwpck_require__(127);
-const signalR = __nccwpck_require__(477);
-const crypto = __nccwpck_require__(417);
+const core = __nccwpck_require__(264);
+const signalR = __nccwpck_require__(241);
 
 async function main() {
 
@@ -4317,17 +4308,10 @@ async function main() {
             .withAutomaticReconnect()
             .build();
 
-
-        var msgBuffer = crypto.randomBytes(36);
-        const hashHex = crypto.createHash('sha256').update(msgBuffer).digest('hex');
-
-        console.log(`Use key ${hashHex} for kill`);
-
+        const hashHex = core.getState("killid");
 
         await connection.start();
         await connection.invoke("RegisterGroup", hashHex);
-
-        core.setOutput("killid", hashHex);
 
         await new Promise(
             function(resolve, reject) {

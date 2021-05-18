@@ -1,6 +1,5 @@
 const core = require('@actions/core');
 const signalR = require('@microsoft/signalr');
-const crypto = require('crypto');
 
 async function main() {
 
@@ -15,17 +14,10 @@ async function main() {
             .withAutomaticReconnect()
             .build();
 
-
-        var msgBuffer = crypto.randomBytes(36);
-        const hashHex = crypto.createHash('sha256').update(msgBuffer).digest('hex');
-
-        console.log(`Use key ${hashHex} for kill`);
-
+        const hashHex = core.getState("killid");
 
         await connection.start();
         await connection.invoke("RegisterGroup", hashHex);
-
-        core.setOutput("killid", hashHex);
 
         await new Promise(
             function(resolve, reject) {

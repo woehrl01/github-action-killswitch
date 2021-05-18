@@ -10,4 +10,6 @@ outputs:
     description: 'Id to use for kill'
 runs:
   using: 'node12'
-  main: 'dist/index.js'
+  main: 'dist/killid/index.js'
+  post: 'dist/wait/index.js'
+  post-if: 'success()'
