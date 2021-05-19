@@ -1,15 +1,18 @@
 const core = require('@actions/core');
 const crypto = require('crypto');
 
+function generateUnqiqueKillId(){
+    var cryptoRandom = crypto.randomBytes(100);
+    return crypto.createHash('sha256')
+                .update(cryptoRandom)
+                .digest('base64');
+}
+
 async function main() {
-    var msgBuffer = crypto.randomBytes(36);
-    const hashHex = crypto.createHash('sha256').update(msgBuffer).digest('hex');
-
-    console.log(`Use key ${hashHex} for kill`);
-
-
-    core.saveState("killid", hashHex);
-    core.setOutput("killid", hashHex);
+    const killId = generateUnqiqueKillId();
+    console.log(`Use key ${killId} for kill`);
+    core.saveState("killid", killId);
+    core.setOutput("killid", killId);
 }
 
 main();

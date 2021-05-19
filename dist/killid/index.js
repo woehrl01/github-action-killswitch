@@ -1,7 +1,7 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 122:
+/***/ 604:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -15,7 +15,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const os = __importStar(__nccwpck_require__(87));
-const utils_1 = __nccwpck_require__(747);
+const utils_1 = __nccwpck_require__(245);
 /**
  * Commands
  *
@@ -87,7 +87,7 @@ function escapeProperty(s) {
 
 /***/ }),
 
-/***/ 264:
+/***/ 127:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -109,9 +109,9 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const command_1 = __nccwpck_require__(122);
-const file_command_1 = __nccwpck_require__(210);
-const utils_1 = __nccwpck_require__(747);
+const command_1 = __nccwpck_require__(604);
+const file_command_1 = __nccwpck_require__(352);
+const utils_1 = __nccwpck_require__(245);
 const os = __importStar(__nccwpck_require__(87));
 const path = __importStar(__nccwpck_require__(622));
 /**
@@ -333,7 +333,7 @@ exports.getState = getState;
 
 /***/ }),
 
-/***/ 210:
+/***/ 352:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -349,9 +349,9 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 // We use any as a valid input type
 /* eslint-disable @typescript-eslint/no-explicit-any */
-const fs = __importStar(__nccwpck_require__(826));
+const fs = __importStar(__nccwpck_require__(747));
 const os = __importStar(__nccwpck_require__(87));
-const utils_1 = __nccwpck_require__(747);
+const utils_1 = __nccwpck_require__(245);
 function issueCommand(command, message) {
     const filePath = process.env[`GITHUB_${command}`];
     if (!filePath) {
@@ -369,7 +369,7 @@ exports.issueCommand = issueCommand;
 
 /***/ }),
 
-/***/ 747:
+/***/ 245:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -403,7 +403,7 @@ module.exports = require("crypto");;
 
 /***/ }),
 
-/***/ 826:
+/***/ 747:
 /***/ ((module) => {
 
 "use strict";
@@ -466,18 +466,21 @@ module.exports = require("path");;
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-const core = __nccwpck_require__(264);
+const core = __nccwpck_require__(127);
 const crypto = __nccwpck_require__(417);
 
+function generateUnqiqueKillId(){
+    var cryptoRandom = crypto.randomBytes(100);
+    return crypto.createHash('sha256')
+                .update(cryptoRandom)
+                .digest('base64');
+}
+
 async function main() {
-    var msgBuffer = crypto.randomBytes(36);
-    const hashHex = crypto.createHash('sha256').update(msgBuffer).digest('hex');
-
-    console.log(`Use key ${hashHex} for kill`);
-
-
-    core.saveState("killid", hashHex);
-    core.setOutput("killid", hashHex);
+    const killId = generateUnqiqueKillId();
+    console.log(`Use key ${killId} for kill`);
+    core.saveState("killid", killId);
+    core.setOutput("killid", killId);
 }
 
 main();
