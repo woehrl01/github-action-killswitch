@@ -1,0 +1,26 @@
+{
+  "name": "github-action-killswitch",
+  "version": "1.0.0",
+  "description": "This project should provide a killswitch, you can use in a GitHub Action workflow. It allows you to sleep for a dedicated amount in your pipeline.",
+  "main": "dist/killid/index.js",
+  "dependencies": {
+    "@actions/core": "^1.2.7",
+    "@actions/github": "^5.0.0",
+    "@microsoft/signalr": "^5.0.6",
+    "ws": "^7.4.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woehrl01/github-action-killswitch.git"
+  },
+  "author": "Lukas Wöhrl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/woehrl01/github-action-killswitch/issues"
+  },
+  "homepage": "https://github.com/woehrl01/github-action-killswitch#readme"
+}

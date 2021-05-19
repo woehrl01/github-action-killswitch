@@ -1,5 +1,6 @@
 const core = require('@actions/core');
 const signalR = require('@microsoft/signalr');
+require('ws');
 
 async function establishConnection(baseUrl, killId){
     let connection = new signalR.HubConnectionBuilder()
